@@ -1,0 +1,57 @@
+/* Basic CSS layout for a website */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-areas: "header header header" "nav main aside" "nav footer footer";
+    /* Important layout */
+    grid-template-columns: 0.5fr 4fr 0.5fr;
+    /*layout size any columns = 1 fraction*/
+    grid-template-rows: 80px 1fr 60px;
+    /*layout size any rows = 1 fraction*/
+}
+
+header,
+footer,
+main,
+nav,
+aside {
+    font: 20px;
+    color: white;
+    padding: 20px;
+    margin: 0px;
+    background-color: steelblue;
+    border: 1px skyblue solid;
+}
+
+header {
+    grid-area: header;
+    /* grid-area: 1 / span 3;  */
+    /* the same manner like first line */
+}
+
+nav {
+    grid-area: nav;
+}
+
+footer {
+    grid-area: footer;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
